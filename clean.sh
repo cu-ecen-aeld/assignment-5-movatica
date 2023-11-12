@@ -4,8 +4,4 @@ set -e
 
 scriptdir=$( dirname -- "$( readlink -f -- "$0"; )"; )
 
-pushd "${scriptdir}/buildroot"
-
-make distclean
-
-popd
+make -C "${scriptdir}/buildroot" distclean
